@@ -1,0 +1,48 @@
+
+/** Aqui le doy la el estilo que quiero que tenga el juego al verlo en pantalla */
+*{
+    padding: 0;
+    margin: 0;
+    color: black; /* color del marcador*/
+    overflow-x: hidden; /* oculte que se vieran las barras de la ventana donde esta el juego */
+}
+.game{     /** CREAMOS LA CAJA DONDE VA EL JUEGO  **/
+    width: 500px;
+    height: 200px;
+    border: 1px solid red; /*color de la linea de la caja */
+    margin: auto;
+}
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: green; /* color de nuestro dinosaurio */
+    position:relative;
+    top: 150px;
+}
+.animate{ /** ESTA CLASE AÑADE EL BRINCO A LA ANIMACION */
+
+    animation: jump 0.3s linear; 
+}
+@keyframes jump{  /* marcamos los pasos de la secuencia del dinosaurio*/
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+#block{   
+    background-color: blue;  /*creamos y damos forma a nuestro "cactus" */
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 130px;
+    left: 500px;
+    animation: block 1s infinite linear;
+}
+@keyframes block{  /*marcamos los pasos de la secuencia del bloque que representa nuestro cactus */
+    0%{left: 500px}
+    100%{left: -20px}
+}
+p{
+    text-align: center;
+}
